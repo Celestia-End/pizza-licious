@@ -10,7 +10,7 @@ public class Pizza {
     private ArrayList<String> toppings = new ArrayList<>();
     private ArrayList<String> sauce = new ArrayList<>();
 
-    public Pizza(String size, String crustType, boolean stuffedCrust) {
+    public Pizza(String size, String crustType, boolean stuffedCrust, ArrayList<String> chees) {
         this.size = size;
         this.crustType = crustType;
         this.stuffedCrust = stuffedCrust;

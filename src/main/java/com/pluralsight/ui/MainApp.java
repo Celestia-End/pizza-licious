@@ -18,19 +18,42 @@ public class MainApp {
             String answer = input.nextLine();
 
             if (answer.equalsIgnoreCase("yes")) {
-                System.out.println("What size would you like? (Small/Medium/Large)");
-                String size = input.nextLine();
+                System.out.println("What size would you like?");
+                System.out.println("1) Small");
+                System.out.println("2) Medium");
+                System.out.println("3) Large");
+                String pizzaSize = input.nextLine();
 
-                System.out.println("What crust would you like? (Thin/Hand-Tossed/Deep Dish)");
-                String crust = input.nextLine();
+                System.out.println();
+
+                System.out.println("What crust would you like?");
+                System.out.println("1) Thin");
+                System.out.println("2) Hand-Tossed");
+                System.out.println("3) Deep Dish");
+                String crustType = input.nextLine();
+
+                System.out.println();
 
                 System.out.println("Would you like stuffed crust?");
+                boolean stuffedCrust = Boolean.parseBoolean(input.nextLine());
+
+                System.out.println();
+
+                System.out.println("Choose a meat");
+                System.out.println("1) Pepperoni");
+                System.out.println("2) Sausage");
+                System.out.println("3) Ham");
+                System.out.println("4) Bacon");
+                System.out.println("5) Chicken");
+                System.out.println("6) Meatballs");
+                System.out.println();
+
+                System.out.println("Would you like to add another meat?");
+
 
                 System.out.println("");
 
-                System.out.println("");
-
-                Pizza pizza = new Pizza(size, crust, stu);
+                Pizza pizza = new Pizza(pizzaSize, crustType, stuffedCrust, meat, cheese);
                 order.addPizza(pizza);
             }
 
@@ -42,9 +65,9 @@ public class MainApp {
                 String flavor = input.nextLine();
 
                 System.out.println("Enter drink size(Small, Medium, Large): ");
-                String size = input.nextLine();
+                String drinkSize = input.nextLine();
 
-               Drink drink = new Drink(size, flavor);
+               Drink drink = new Drink(drinkSize, flavor);
                order.addDrink(drink);
             }
 
